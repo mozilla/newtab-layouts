@@ -1,151 +1,157 @@
 {
-	"lastUpdate": 1585675378512,
-	"spocs": {
-		"url": "https://spocs.getpocket.com/spocs",
-		"spocs_per_domain": 3
-	},
-	"layout": [{
-		"width": 12,
-		"components": [{
-				"type": "TopSites",
-				"header": {
-					"title": {
-						"id": "newtab-section-header-topsites"
-					}
-				},
-				"properties": {}
-			},
-			{
-				"type": "CollectionCardGrid",
-				"properties": {
-					"items": 3
-				},
-				"header": {
-					"title": ""
-				},
-				"placement": {
-					"name": "sponsored-collection",
-					"ad_types": [
-						3617
-					],
-					"zone_ids": [
-						217759,
-						218031
-					]
-				},
-				"spocs": {
-					"probability": 1,
-					"positions": [{
-							"index": 0
-						},
-						{
-							"index": 1
-						},
-						{
-							"index": 2
-						}
-					]
-				}
-			},
-			{
-				"type": "Message",
-				"header": {
-					"title": {
-						"id": "newtab-section-header-pocket",
-						"values": {
-							"provider": "Pocket"
-						}
-					},
-					"subtitle": "",
-					"link_text": {
-						"id": "newtab-pocket-learn-more"
-					},
-					"link_url": "https://getpocket.com/firefox/new_tab_learn_more",
-					"icon": "resource://activity-stream/data/content/assets/glyph-pocket-16.svg"
-				},
-				"properties": {},
-				"styles": {
-					".ds-message": "margin-bottom: -20px"
-				}
-			},
-			{
-				"type": "CardGrid",
-				"properties": {
-					"items": 21
-				},
-				"header": {
-					"title": ""
-				},
-				"placement": {
-					"name": "spocs",
-					"ad_types": [
-						3617
-					],
-					"zone_ids": [
-						217758,
-						217995
-					]
-				},
-				"feed": {
-					"embed_reference": null,
-					"url": "https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=$locale&count=30"
-				},
-				"spocs": {
-					"probability": 1,
-					"positions": [{
-							"index": 2
-						},
-						{
-							"index": 4
-						},
-						{
-							"index": 11
-						},
-						{
-							"index": 20
-						}
-					]
-				}
-			},
-			{
-				"type": "Navigation",
-				"properties": {
-					"alignment": "left-align",
-					"links": [{
-							"name": "Must Reads",
-							"url": "https://getpocket.com/explore/must-reads?src=fx_new_tab"
-						},
-						{
-							"name": "Productivity",
-							"url": "https://getpocket.com/explore/productivity?src=fx_new_tab"
-						},
-						{
-							"name": "Health",
-							"url": "https://getpocket.com/explore/health?src=fx_new_tab"
-						},
-						{
-							"name": "Finance",
-							"url": "https://getpocket.com/explore/finance?src=fx_new_tab"
-						},
-						{
-							"name": "Technology",
-							"url": "https://getpocket.com/explore/technology?src=fx_new_tab"
-						},
-						{
-							"name": "More Recommendations ›",
-							"url": "https://getpocket.com/explore/trending?src=fx_new_tab"
-						}
-					]
-				},
-				"header": {
-					"title": {
-						"id": "newtab-pocket-read-more"
-					}
-				},
-				"styles": {
-					".ds-navigation": "margin-top: -10px;"
-				}
-			}
-		]
-	}]
+  "lastUpdate": 1585675378512,
+  "spocs": {
+    "url": "https://spocs.getpocket.com/spocs",
+    "spocs_per_domain": 3
+  },
+  "layout": [
+    {
+      "width": 12,
+      "components": [
+        {
+          "type": "TopSites",
+          "header": {
+            "title": {
+              "id": "newtab-section-header-topsites"
+            }
+          },
+          "properties": {}
+        },
+        {
+          "type": "CollectionCardGrid",
+          "properties": {
+            "items": 3
+          },
+          "header": {
+            "title": ""
+          },
+          "placement": {
+            "name": "sponsored-collection",
+            "ad_types": [
+              3617
+            ],
+            "zone_ids": [
+              217759,
+              218031
+            ]
+          },
+          "spocs": {
+            "probability": 1,
+            "positions": [
+              {
+                "index": 0
+              },
+              {
+                "index": 1
+              },
+              {
+                "index": 2
+              }
+            ]
+          }
+        },
+        {
+          "type": "Message",
+          "header": {
+            "title": {
+              "id": "newtab-section-header-pocket",
+              "values": {
+                "provider": "Pocket"
+              }
+            },
+            "subtitle": "",
+            "link_text": {
+              "id": "newtab-pocket-learn-more"
+            },
+            "link_url": "https://getpocket.com/firefox/new_tab_learn_more",
+            "icon": "resource://activity-stream/data/content/assets/glyph-pocket-16.svg"
+          },
+          "properties": {},
+          "styles": {
+            ".ds-message": "margin-bottom: -20px"
+          }
+        },
+        {
+          "type": "CardGrid",
+          "properties": {
+            "items": 21
+          },
+          "header": {
+            "title": ""
+          },
+          "placement": {
+            "name": "spocs",
+            "ad_types": [
+              3617
+            ],
+            "zone_ids": [
+              217758,
+              217995
+            ]
+          },
+          "feed": {
+            "embed_reference": null,
+            "url": "https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=$locale&count=30"
+          },
+          "spocs": {
+            "probability": 1,
+            "positions": [
+              {
+                "index": 2
+              },
+              {
+                "index": 4
+              },
+              {
+                "index": 11
+              },
+              {
+                "index": 20
+              }
+            ]
+          }
+        },
+        {
+          "type": "Navigation",
+          "properties": {
+            "alignment": "left-align",
+            "links": [
+              {
+                "name": "Must Reads",
+                "url": "https://getpocket.com/explore/must-reads?src=fx_new_tab"
+              },
+              {
+                "name": "Productivity",
+                "url": "https://getpocket.com/explore/productivity?src=fx_new_tab"
+              },
+              {
+                "name": "Health",
+                "url": "https://getpocket.com/explore/health?src=fx_new_tab"
+              },
+              {
+                "name": "Finance",
+                "url": "https://getpocket.com/explore/finance?src=fx_new_tab"
+              },
+              {
+                "name": "Technology",
+                "url": "https://getpocket.com/explore/technology?src=fx_new_tab"
+              },
+              {
+                "name": "More Recommendations ›",
+                "url": "https://getpocket.com/explore/trending?src=fx_new_tab"
+              }
+            ]
+          },
+          "header": {
+            "title": {
+              "id": "newtab-pocket-read-more"
+            }
+          },
+          "styles": {
+            ".ds-navigation": "margin-top: -10px;"
+          }
+        }
+      ]
+    }
+  ]
 }
