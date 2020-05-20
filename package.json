@@ -4,7 +4,7 @@
   "description": "Remote layouts for Firefox Newtab ",
   "main": "index.js",
   "scripts": {
-    "build": "docker build -t newtab-layouts .",
+    "build:docker": "docker build -t newtab-layouts .",
     "test": "exit 0",
     "start": "node index.js",
     "start:docker": "docker run --env-file .env -dp 1234:1234 newtab-layouts"
