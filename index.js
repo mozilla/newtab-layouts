@@ -7,7 +7,7 @@ const express = require('express')
 const app = express()
 
 app.use(compression())
-app.use(express.static('layouts'))
+app.use(`/layout`, express.static(`layouts`)) // Serve all layouts from `/layout route`
 
 app.get('/', (req, res) => res.send('<h1>Firefox Newtab Layout Service</h1><p>Status: <strong>NORMAL</strong></p>'))
 
