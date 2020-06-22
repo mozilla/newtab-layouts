@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:docker": "docker build -t newtab-layouts .",
-    "test": "exit 0",
+    "test": "npx mocha",
     "start": "node index.js",
     "start:docker": "docker run --env-file .env -dp 1234:1234 newtab-layouts"
   },
@@ -19,5 +19,9 @@
     "compression": "1.7.4",
     "dotenv": "8.2.0",
     "express": "4.17.1"
+  },
+  "devDependencies": {
+    "ajv": "^6.12.2",
+    "mocha": "^8.0.1"
   }
 }
