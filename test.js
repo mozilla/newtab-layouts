@@ -3,24 +3,16 @@ const fs = require('fs')
 const Ajv = require('ajv')
 const chai = require('chai')
 const expect = require('chai').expect
+const schema = require('./layout-schema.json')
 
 chai.use(require('chai-json'))
 
 // Set up AJV for JSON validation
 let ajv = new Ajv({allErrors: true})
 
-// TODO : Pull from file
-let schema = {
-  "properties": {
-    "spocs": { "type": "string" },
-    "layout": { "type": "number", "maximum": 3 }
-  }
-};
-
 let validate = ajv.compile(schema)
 
 // Injest array of layouts paths:
-
 let layoutFilenames = []
 let layoutContents = {}
 let allPathsRead = false
@@ -41,7 +33,6 @@ dir.closeSync()
 layoutFilenames.sort(); // Paths are read in non-alphabetical order
 
 // Construct array of layout file contents
-
 layoutFilenames.forEach((path) => {
   const contents = fs.readFileSync(`./layouts/${path}`, `utf8`)
   layoutContents[path.split(`.`)[0]] = contents
@@ -54,4 +45,12 @@ describe('Layouts', () => {
       expect(`./layouts/${filename}`).to.be.a.jsonFile()
     })
   })
+
+  it('Should pass JSON schema', () => {
+    for (let layout in layoutContents) {
+      let valid = validate(JSON.parse(layoutContents[layout]))
+      assert(valid, `${layout} - ${JSON.stringify(validate.errors)}`)
+    }
+  })
+
 })
