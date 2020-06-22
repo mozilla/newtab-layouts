@@ -1,38 +1,67 @@
-var assert = require('assert')
-var Ajv = require('ajv')
+const assert = require('assert')
+const fs = require('fs')
+const Ajv = require('ajv')
 
 // Set up AJV for JSON validation
-var ajv = new Ajv({allErrors: true})
+let ajv = new Ajv({allErrors: true})
 
 // TODO : Pull from file
-var schema = {
+let schema = {
   "properties": {
-    "foo": { "type": "string" },
-    "bar": { "type": "number", "maximum": 3 }
+    "spocs": { "type": "string" },
+    "layout": { "type": "number", "maximum": 3 }
   }
 };
 
-var validate = ajv.compile(schema)
+let validate = ajv.compile(schema)
 
-// TODO : pull array of layouts
+// Injest array of layouts paths:
 
+let layoutPaths = []
+let layoutContents = {}
+let allPathsRead = false
+let dir = fs.opendirSync(`./layouts`)
 
+while (!allPathsRead) {
+  let entry = dir.readSync();
 
+  if (entry) {
+    layoutPaths.push(entry.name)
+  } else {
+    allPathsRead = true;
+  }
+}
+
+layoutPaths.sort(); // Paths are read in non-alphabetical order
+
+// Construct array of layout file contents
+
+layoutPaths.forEach((path) => {
+  const contents = fs.readFileSync(`./layouts/${path}`, `utf8`)
+  layoutContents[path.split(`.`)[0]] = contents
+})
 
 // Run tests
 describe('Layouts', () => {
   it('Should be parseable JSON', () => {
-    var jsonString = `{"foo":1}`
-    var parseResult
-    var isValidJSON = true
+    // TODO - Parse all layouts & return meaningful failures
 
-    try {
-      JSON.parse(jsonString)
-    } catch (error) {
-      parseResult = error
-      isValidJSON = false
+    let validateJSON = (jsonString, layoutID) => {
+      let parseResult = `${layoutID} - `
+      let isValidJSON = true
+
+      try {
+        JSON.parse(jsonString)
+      } catch (error) {
+        parseResult = error
+        isValidJSON = false
+      }
+
+      assert(isValidJSON, layoutID)
     }
 
-    assert(isValidJSON, parseResult)
+    validateJSON(layoutContents.default, `default`)
+    validateJSON(layoutContents.collection, `collection`)
+
   })
 })
