@@ -24,12 +24,8 @@
           },
           "placement": {
             "name": "sponsored-collection",
-            "ad_types": [
-              3618
-            ],
-            "zone_ids": [
-              207144
-            ]
+            "ad_types": [3618],
+            "zone_ids": [207144]
           },
           "spocs": {
             "probability": 1,
@@ -74,10 +70,7 @@
           },
           "placement": {
             "name": "spocs",
-            "ad_types": [
-              2401,
-              3617
-            ]
+            "ad_types": [2401, 3617]
           },
           "spocs": {
             "probability": 1,

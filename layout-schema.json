@@ -12,10 +12,7 @@
           "type": "number"
         }
       },
-      "required": [
-        "url",
-        "spocs_per_domain"
-      ]
+      "required": ["url", "spocs_per_domain"]
     },
     "layout": {
       "type": "array",
@@ -40,21 +37,13 @@
                   "type": "object"
                 }
               },
-              "required": [
-                "type"
-              ]
+              "required": ["type"]
             }
           }
         },
-        "required": [
-          "width",
-          "components"
-        ]
+        "required": ["width", "components"]
       }
     }
   },
-  "required": [
-    "spocs",
-    "layout"
-  ]
+  "required": ["spocs", "layout"]
 }
