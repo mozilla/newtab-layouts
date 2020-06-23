@@ -8,7 +8,7 @@ const schema = require('./layout-schema.json')
 chai.use(require('chai-json'))
 
 // Set up AJV for JSON validation
-let ajv = new Ajv({allErrors: true})
+let ajv = new Ajv({ allErrors: true })
 
 let validate = ajv.compile(schema)
 
@@ -19,18 +19,18 @@ let allPathsRead = false
 let dir = fs.opendirSync(`./layouts`)
 
 while (!allPathsRead) {
-  let entry = dir.readSync();
+  let entry = dir.readSync()
 
   if (entry) {
     layoutFilenames.push(entry.name)
   } else {
-    allPathsRead = true;
+    allPathsRead = true
   }
 }
 
 dir.closeSync()
 
-layoutFilenames.sort(); // Paths are read in non-alphabetical order
+layoutFilenames.sort() // Paths are read in non-alphabetical order
 
 // Construct array of layout file contents
 layoutFilenames.forEach((path) => {
@@ -52,5 +52,4 @@ describe('Layouts', () => {
       assert(valid, `${layout} - ${JSON.stringify(validate.errors)}`)
     }
   })
-
 })
