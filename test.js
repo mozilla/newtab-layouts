@@ -49,7 +49,13 @@ describe('Layouts', () => {
   it('Should pass JSON schema', () => {
     for (let layout in layoutContents) {
       let valid = validate(JSON.parse(layoutContents[layout]))
-      assert(valid, `${layout} - ${JSON.stringify(validate.errors)}`)
+
+      let errorObject = {
+        layout: `${layout}.json`,
+        errors: validate.errors
+      }
+
+      assert(valid, JSON.stringify(errorObject,null, 2))
     }
   })
 
