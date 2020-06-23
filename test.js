@@ -52,4 +52,10 @@ describe('Layouts', () => {
       assert(valid, `${layout} - ${JSON.stringify(validate.errors)}`)
     }
   })
+
+  it('Should use kebab-case filename', () => {
+    layoutFilenames.forEach((filename) => {
+      assert(filename.match(/^[a-z\d\-]+\.json$/), filename)
+    })
+  })
 })
