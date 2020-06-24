@@ -52,10 +52,10 @@ describe('Layouts', () => {
 
       let errorObject = {
         layout: `${layout}.json`,
-        errors: validate.errors
+        errors: validate.errors,
       }
 
-      assert(valid, JSON.stringify(errorObject,null, 2))
+      assert(valid, JSON.stringify(errorObject, null, 2))
     }
   })
 
