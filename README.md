@@ -1,4 +1,4 @@
-[![Pocket](https://circleci.com/gh/Pocket/newtab-layouts.svg?style=svg&circle-token=cd95def39a0addb9b3ff196e29ae11d8e571f1be)](https://app.circleci.com/pipelines/github/Pocket/newtab-layouts)
+[![Build Status Badge](https://circleci.com/gh/mozilla/newtab-layouts.svg?style=svg)](https://app.circleci.com/pipelines/github/mozilla/newtab-layouts)
 
 # Newtab Layouts
 
