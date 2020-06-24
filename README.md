@@ -14,11 +14,6 @@ Requirements: `node`
 - `cp example.env .env`
 - `npm start`
 
-### Running with Docker
-
-- `docker build -t newtab-layouts .`
-- `docker run --env-file .env -dp 1234:1234 newtab-layouts`
-
 ## Configuring Firefox to use a local layout
 
 - Open `about:conf`
