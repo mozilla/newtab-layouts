@@ -1,7 +1,6 @@
 {
   "spocs": {
-    "url": "https://spocs.getpocket.com/spocs",
-    "spocs_per_domain": 3
+    "url": "https://spocs.getpocket.com/spocs"
   },
   "layout": [
     {

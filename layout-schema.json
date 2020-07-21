@@ -8,12 +8,10 @@
         "url": {
           "type": "string",
           "format": "uri"
-        },
-        "spocs_per_domain": {
-          "type": "number"
         }
       },
-      "required": ["url", "spocs_per_domain"]
+      "required": ["url"],
+      "additionalProperties": false
     },
     "layout": {
       "type": "array",
