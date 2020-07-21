@@ -3,3 +3,4 @@
 .vscode
 democonfig
 node_modules/
+layouts/default-with-experimental-zone.json
