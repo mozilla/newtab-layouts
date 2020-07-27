@@ -2,5 +2,6 @@
 .env
 .vscode
 democonfig
+layouts-to-migrate/
 node_modules/
 layouts/default-with-experimental-zone.json
