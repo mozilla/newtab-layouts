@@ -22,7 +22,7 @@
     "express": "4.17.1"
   },
   "devDependencies": {
-    "ajv": "6.12.2",
+    "ajv": "6.12.3",
     "chai": "4.2.0",
     "chai-json": "1.0.0",
     "mocha": "8.0.1",
